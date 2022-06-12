@@ -13,6 +13,7 @@ function printBooks() {
     console.log(book, index)
   });
   removeBook();
+  UpdateRead();
 }
 
 // Clears the form inputs
@@ -40,8 +41,22 @@ function removeBook() {
     btn.addEventListener('click', () => {
       myLibrary.splice(btn.getAttribute('data'), 1);
       printBooks();
-    })
-  })
+    });
+  });
+}
+
+function UpdateRead() {
+  const bookCheckbox = document.querySelectorAll('.card-checkbox');
+  bookCheckbox.forEach((checkbox) => {
+    checkbox.addEventListener('click', update => {
+      const bookIndex = checkbox.getAttribute('data');
+      const readValue = checkbox.checked;
+      console.log('This', bookIndex, readValue)
+      update.prototype = Object.create(Book.prototype);
+      update.prototype.updateBook(bookIndex, readValue);
+      console.log(myLibrary);
+    });
+  });
 }
 
 // Library array of books
@@ -66,6 +81,10 @@ function Book(title, author, pages, read) {
   this.author = author;
   this.pages = pages;
   this.read = read;
+}
+
+Book.prototype.updateBook = function (index, value) {
+  myLibrary[index].read = value;
 }
 
 // Creates the Book elements for the page
@@ -94,6 +113,7 @@ function createBookCard(book, index) {
 
   // Adds the read checkbox to the div
   const cardCheckbox = document.createElement('input');
+  cardCheckbox.setAttribute('data', index);
   cardCheckbox.setAttribute('type', 'checkbox');
   cardCheckbox.setAttribute('id', 'checkbox');
   cardCheckbox.setAttribute('name', 'checkbox');
@@ -120,4 +140,4 @@ function createBookCard(book, index) {
 }
 
 printBooks();
-// console.log(myLibrary[1])
+console.log(myLibrary[1])
