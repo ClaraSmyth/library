@@ -5,23 +5,20 @@ const pages = document.querySelector('#book-pages');
 const read = document.querySelector('#book-read');
 const bookSection = document.querySelector('.main');
 
-// Prints all the books in the Library to the page
-function printBooks() {
-  bookSection.textContent = '';
-  myLibrary.forEach((book, index) => {
-    createBookCard(book, index);
-    console.log(book, index)
-  });
-  removeBook();
-  UpdateRead();
+// Library array of books
+let myLibrary = [];
+
+// Book constructor
+function Book(title, author, pages, read) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.read = read;
 }
 
-// Clears the form inputs
-function clearInputs() {
-  title.value = '';
-  author.value = '';
-  pages.value = '';
-  read.checked = false;
+// Updates the book within array
+Book.prototype.updateBook = function (index, value) {
+  myLibrary[index].read = value;
 }
 
 // Adds books to library
@@ -51,26 +48,28 @@ function UpdateRead() {
     checkbox.addEventListener('click', update => {
       const bookIndex = checkbox.getAttribute('data');
       const readValue = checkbox.checked;
-      update.prototype = Object.create(Book.prototype);
-      update.prototype.updateBook(bookIndex, readValue);
+      update = Object.create(Book.prototype);
+      update.updateBook(bookIndex, readValue);
     });
   });
 }
 
-// Library array of books
-let myLibrary = [];
-
-// Book constructor
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+// Prints all the books in the Library to the page
+function printBooks() {
+  bookSection.textContent = '';
+  myLibrary.forEach((book, index) => {
+    createBookCard(book, index);
+  });
+  removeBook();
+  UpdateRead();
 }
 
-// Updates the book within array
-Book.prototype.updateBook = function (index, value) {
-  myLibrary[index].read = value;
+// Clears the form inputs
+function clearInputs() {
+  title.value = '';
+  author.value = '';
+  pages.value = '';
+  read.checked = false;
 }
 
 // Creates the Book elements for the page
@@ -121,6 +120,6 @@ function createBookCard(book, index) {
   cardBtn.innerText = 'Remove';
   newCardDiv.append(cardBtn);
 
-  //Adds the new book to the page
+  //Adds the new book to book section of the page
   bookSection.append(newCardDiv);
 }
