@@ -1,0 +1,21 @@
+body {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr;
+    grid-auto-rows: max-content auto;
+    justify-items: center;
+}
+
+.header {
+    display: flex;
+    gap: 4rem;
+}
+
+.card {
+    background-color: gray;
+    height: 250px;
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    display: grid;
+}
