@@ -11,10 +11,12 @@
 </head>
 <body>
     <header class="header">
-        <h1 class="header-title">Library</h1>
-        <button class="header-btn">Add Book</button>
+        <div class="header-container">
+            <h1 class="header-title">Library</h1>
+            <button class="header-btn">Add Book</button>
+        </div>
     </header>
-    <section>
+    <!-- <section>
         <form id="book-form">
             <fieldset>
                 <label for="book-name">Book Name</label>
@@ -31,8 +33,16 @@
             </fieldset>
             <button type="submit">Submit</button>
         </form>
-    </section>
+    </section> -->
     <main class="main">
+        <div class="card">
+            <h2 class="card-title">The Hobbit</h2>
+            <p class="card-author">J.R.R. Tolkien</p>
+            <p class="card-pages">500 Pages</p>
+            <input class="card-checkbox" type="checkbox" id="checkbox" name="checkbox">
+            <label class="card-checkbox-label" for="checkbox">Read?</label>
+            <button class="card-btn">Remove</button>
+        </div>
     </main>
     <footer class="footer">
         <p>Created by <a class="footer-link" href="https://github.com/ClaraSmyth">Clara</a> for <a class="footer-link" href="https://www.theodinproject.com">TheOdinProject</a></p>
