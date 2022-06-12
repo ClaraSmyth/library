@@ -15,11 +15,20 @@ function printBooks() {
   removeBook();
 }
 
+// Clears the form inputs
+function clearInputs() {
+  title.value = '';
+  author.value = '';
+  pages.value = '';
+  read.checked = false;
+}
+
 // Adds books to library
 bookForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const book = new Book(title.value, author.value, pages.value, read.checked);
   myLibrary.push(book);
+  clearInputs();
   printBooks();
   console.log(myLibrary)
 });
