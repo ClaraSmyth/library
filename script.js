@@ -3,12 +3,22 @@ const title = document.querySelector('#book-name');
 const author = document.querySelector('#book-author');
 const pages = document.querySelector('#book-pages');
 const read = document.querySelector('#book-read');
+const bookSection = document.querySelector('.main');
+
+// Prints all the books in the Library to the page
+function printBooks() {
+  bookSection.textContent = '';
+  myLibrary.forEach((book) => {
+    createBookCard(book);
+  });
+}
 
 // Adds books to library
 bookForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const book = new Book(title.value, author.value, pages.value, read.checked);
   myLibrary.push(book);
+  printBooks();
   console.log(myLibrary)
 });
 
@@ -36,9 +46,8 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 
-// Prints the book to the page
-function addBookToPage() {
-  const bookSection = document.querySelector('.main');
+// Creates the Book elements for the page
+function createBookCard(book) {
 
   // Creates the card div
   const newCardDiv = document.createElement('div');
@@ -47,19 +56,19 @@ function addBookToPage() {
   //Adds a title to the div
   const cardTitle = document.createElement('h2');
   cardTitle.classList.add('card-title');
-  cardTitle.innerText = 'Title';
+  cardTitle.innerText = book.title;
   newCardDiv.append(cardTitle);
 
   // Adds the author name to the div
   const cardAuthor = document.createElement('p');
   cardAuthor.classList.add('card-author');
-  cardAuthor.innerText = 'Author Name';
+  cardAuthor.innerText = book.author;
   newCardDiv.append(cardAuthor);
 
   // Adds the pages to the div
   const cardPages = document.createElement('p');
   cardPages.classList.add('card-pages');
-  cardPages.innerText = '500';
+  cardPages.innerText = book.pages + ' Pages';
   newCardDiv.append(cardPages);
 
   // Adds the read checkbox to the div
@@ -87,4 +96,4 @@ function addBookToPage() {
   bookSection.append(newCardDiv);
 }
 
-addBookToPage()
+printBooks();
