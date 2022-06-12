@@ -11,6 +11,11 @@ body {
     gap: 4rem;
 }
 
+.main {
+    display: flex;
+    gap: 2rem;
+}
+
 .card {
     background-color: gray;
     height: 250px;
