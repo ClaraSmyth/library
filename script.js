@@ -7,7 +7,8 @@ const read = document.querySelector('#book-read');
 bookForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const book = new Book(title.value, author.value, pages.value, read.checked);
-  console.log(book)
+  myLibrary.push(book);
+  console.log(myLibrary[2])
 });
 
 let myLibrary = [
