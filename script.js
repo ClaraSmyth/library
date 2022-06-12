@@ -98,6 +98,7 @@ function createBookCard(book, index) {
   cardCheckbox.setAttribute('id', 'checkbox');
   cardCheckbox.setAttribute('name', 'checkbox');
   cardCheckbox.classList.add('card-checkbox');
+  cardCheckbox.checked = book.read;
   newCardDiv.append(cardCheckbox);
 
   // Adds the read checkbox label to the div
