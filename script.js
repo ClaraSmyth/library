@@ -1,8 +1,8 @@
 const bookForm = document.querySelector('#book-form');
-const title = document.querySelector('#book-name');
-const author = document.querySelector('#book-author');
-const pages = document.querySelector('#book-pages');
-const read = document.querySelector('#book-read');
+const title = document.querySelector('#book-form-name');
+const author = document.querySelector('#book-form-author');
+const pages = document.querySelector('#book-form-pages');
+const read = document.querySelector('#book-form-read');
 const bookSection = document.querySelector('.main');
 
 // Library array of books
