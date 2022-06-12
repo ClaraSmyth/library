@@ -12,6 +12,7 @@ function printBooks() {
     createBookCard(book, index);
     console.log(book, index)
   });
+  removeBook();
 }
 
 // Adds books to library
@@ -21,6 +22,17 @@ bookForm.addEventListener('submit', (e) => {
   myLibrary.push(book);
   console.log(myLibrary)
 });
+
+// Remove books from Library
+function removeBook() {
+  const removeBtns = document.querySelectorAll('.card-btn');
+  removeBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      myLibrary.splice(btn.getAttribute('data'), 1);
+      printBooks();
+    })
+  })
+}
 
 // Library array of books
 let myLibrary = [
