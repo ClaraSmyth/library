@@ -31,7 +31,6 @@ bookForm.addEventListener('submit', (e) => {
   myLibrary.push(book);
   clearInputs();
   printBooks();
-  console.log(myLibrary)
 });
 
 // Remove books from Library
@@ -45,35 +44,21 @@ function removeBook() {
   });
 }
 
+// Function to update the books read status
 function UpdateRead() {
   const bookCheckbox = document.querySelectorAll('.card-checkbox');
   bookCheckbox.forEach((checkbox) => {
     checkbox.addEventListener('click', update => {
       const bookIndex = checkbox.getAttribute('data');
       const readValue = checkbox.checked;
-      console.log('This', bookIndex, readValue)
       update.prototype = Object.create(Book.prototype);
       update.prototype.updateBook(bookIndex, readValue);
-      console.log(myLibrary);
     });
   });
 }
 
 // Library array of books
-let myLibrary = [
-  { 
-    title: 'The Hobbit',
-    author: 'J.R.R. Tolkein',
-    pages: '500',
-    read: true
-  },
-  { 
-    title: 'Harry Potter',
-    author: 'J.K. Rowling',
-    pages: '600',
-    read: false
-  },
-];
+let myLibrary = [];
 
 // Book constructor
 function Book(title, author, pages, read) {
@@ -83,6 +68,7 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 
+// Updates the book within array
 Book.prototype.updateBook = function (index, value) {
   myLibrary[index].read = value;
 }
@@ -138,6 +124,3 @@ function createBookCard(book, index) {
   //Adds the new book to the page
   bookSection.append(newCardDiv);
 }
-
-printBooks();
-console.log(myLibrary[1])
