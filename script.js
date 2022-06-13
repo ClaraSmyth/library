@@ -64,6 +64,7 @@ function UpdateRead() {
       const readValue = checkbox.checked;
       update = Object.create(Book.prototype);
       update.updateBook(bookIndex, readValue);
+      console.log(myLibrary)
     });
   });
 }
@@ -114,24 +115,32 @@ function createBookCard(book, index) {
   const cardCheckbox = document.createElement('input');
   cardCheckbox.setAttribute('data', index);
   cardCheckbox.setAttribute('type', 'checkbox');
-  cardCheckbox.setAttribute('id', 'checkbox');
-  cardCheckbox.setAttribute('name', 'checkbox');
+  cardCheckbox.setAttribute('id', `checkbox${index}`);
+  cardCheckbox.setAttribute('name', `checkbox${index}`);
   cardCheckbox.classList.add('card-checkbox');
   cardCheckbox.checked = book.read;
   newCardDiv.append(cardCheckbox);
 
-  // Adds the read checkbox label to the div
+  // Adds the read checkbox label
   const cardCheckboxLabel = document.createElement('label');
-  cardCheckboxLabel.setAttribute('for', 'checkbox');
+  cardCheckboxLabel.setAttribute('for', `checkbox${index}`);
   cardCheckboxLabel.classList.add('card-checkbox-label');
-  cardCheckboxLabel.innerText = 'Read?';
+  // Adds the icon to the checkbox label div
+  const cardCheckboxLabelIcon = document.createElement('img');
+  cardCheckboxLabelIcon.setAttribute('src', './icons/eye.svg');
+  cardCheckboxLabelIcon.classList.add('card-checkbox-label-svg');
+  cardCheckboxLabel.append(cardCheckboxLabelIcon);
   newCardDiv.append(cardCheckboxLabel);
 
   // Adds a remove button to the div
   const cardBtn = document.createElement('button');
   cardBtn.setAttribute('data', index);
   cardBtn.classList.add('card-btn');
-  cardBtn.innerText = 'Remove';
+  //Adds icon to the remove button
+  const cardBtnIcon = document.createElement('img');
+  cardBtnIcon.setAttribute('src', './icons/delete.svg');
+  cardBtnIcon.classList.add('card-btn-svg');
+  cardBtn.append(cardBtnIcon);
   newCardDiv.append(cardBtn);
 
   //Adds the new book to book section of the page
