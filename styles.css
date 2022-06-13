@@ -29,6 +29,25 @@ body {
     max-width: 1000px;
 }
 
+.header-btn {
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    background: none;
+    min-width: 48px;
+}
+
+.header-btn-svg {
+    width: 100%;
+    filter: invert(0);
+    transition: transform 250ms;
+}
+
+.header-btn:hover .header-btn-svg {
+    filter: invert(1);
+    transform: scale(1.2);
+}
+
 /*####################################
                 MAIN
 ####################################*/
@@ -87,6 +106,10 @@ body {
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
+}
+
+.book-form-close:hover {
+    filter: invert(0.5) sepia(1) saturate(100);
 }
 
 .book-form-fieldset {
