@@ -86,7 +86,7 @@ body {
     padding: 5px;
     bottom: 0;
     left: 34px;
-    background-color: hsla(0, 0%, 100%, 50%);
+    background-color: hsla(0, 0%, 100%, 60%);
     border-radius: 0 10px 0 0;
 }
 
@@ -95,7 +95,9 @@ body {
     padding: 3px 3px 7px 7px; 
     bottom: 0px;
     left: -34px;
-    background-color: hsla(0, 0%, 100%, 50%);
+    min-width: 34px;
+    background-color: hsla(0, 0%, 100%, 100%);
+    filter: opacity(0.6)
 }
 
 .card-checkbox {
@@ -108,7 +110,7 @@ body {
     top: 0;
     left: 0;
     border-radius: 0 0 10px 0;
-    background: hsla(0, 100%, 50%, 0.45);
+    background: #e07386;
     cursor: pointer;
 }
 
@@ -117,7 +119,7 @@ body {
 }
 
 .card-checkbox:checked + .card-checkbox-label {
-    background: hsla(120, 100%, 25%, 0.45);
+    background: #1fc11f;
 }
 
 .card-checkbox-label:hover .card-checkbox-label-svg {
@@ -131,12 +133,12 @@ body {
     bottom: 0;
     border: none;
     border-radius: 10px 0 0 0;
-    background: hsla(0, 0%, 100%, 0.45);
+    background: hsla(0, 0%, 100%, 0.6);
     cursor: pointer;
 }
 
 .card-btn:hover {
-    background-color: hsla(0, 100%, 50%, 0.45);
+    background-color: #e07386;
 }
 
 .card-btn-svg {
