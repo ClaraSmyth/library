@@ -2,11 +2,10 @@
 
 ## Live Version - [Click here!](https://clarasmyth.github.io/library/)
 
+![Image of webpage on desktop](./img/gifOfPage.gif)
+
 Image on Desktop size screen
 ![Image of webpage on desktop](./img/Desktop.png)
-
-Image on Tablet size screen
-![Image of webpage on desktop](./img/Tablet.png)
 
 Image on Mobile size screen
 ![Image of webpage on desktop](./img/Mobile.png)
