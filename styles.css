@@ -5,6 +5,7 @@ body {
     justify-content: center;
     grid-auto-rows: max-content;
     font-size: 16px;
+    color: hsla(0, 0%, 0%, 0.7);
     font-family: 'Nunito Sans', sans-serif;
     background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
 }
@@ -42,7 +43,7 @@ body {
 
 .header-btn-svg {
     width: 100%;
-    filter: invert(0);
+    filter: invert(0) opacity(0.7);
     transition: transform 250ms;
 }
 
@@ -111,6 +112,10 @@ body {
     cursor: pointer;
 }
 
+.card-checkbox-label-svg {
+    filter: opacity(0.6);
+}
+
 .card-checkbox:checked + .card-checkbox-label {
     background: hsla(120, 100%, 25%, 0.45);
 }
@@ -132,6 +137,10 @@ body {
 
 .card-btn:hover {
     background-color: hsla(0, 100%, 50%, 0.45);
+}
+
+.card-btn-svg {
+    filter: opacity(0.7);
 }
 
 .card-btn:hover .card-btn-svg {
@@ -165,6 +174,7 @@ body {
     padding: 1rem;
     width: min-content;
     z-index: 2;
+    border-radius: 1rem
 }
 
 .book-form-close {
@@ -183,6 +193,36 @@ body {
     flex-direction: column;
 }
 
+.book-form-btn {
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 0;
+}
+
+.book-form-fieldset input {
+    margin-bottom: 1rem;
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
+    border: 2px solid hsla(0, 0%, 0%, 0.2);
+}
+
+.book-form-fieldset input:hover {
+    border: 2px solid hsla(0, 0%, 0%, 0.4);
+}
+
+.book-form-checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 40px;
+}
+
+#book-form-read {
+    margin: 0;
+    width: 24px;
+    height: 24px;
+}
 
 /*####################################
                 FOOTER
@@ -199,6 +239,13 @@ body {
 
 .footer-link {
     text-decoration: none;
-    color: black;
+    color: hsla(0, 0%, 0%, 0.7);
     font-weight: 700;
+    font-size: 1.05em;
+    text-shadow: 1px 1px white;
+    transition: transform 250ms;
+}
+
+.footer-link:hover {
+    color: #d16ba5;
 }
