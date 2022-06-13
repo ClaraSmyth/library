@@ -4,6 +4,19 @@ const author = document.querySelector('#book-form-author');
 const pages = document.querySelector('#book-form-pages');
 const read = document.querySelector('#book-form-read');
 const bookSection = document.querySelector('.main');
+const openFormBtn = document.querySelector('.header-btn');
+const closeFormBtn = document.querySelector('.book-form-close');
+const formModal = document.querySelector('.form-modal');
+
+// Opens form modal
+openFormBtn.addEventListener('click', () => {
+  formModal.classList.add('active');
+});
+
+// Closes form modal
+closeFormBtn.addEventListener('click', (e) => {
+  formModal.classList.remove('active');
+});
 
 // Library array of books
 let myLibrary = [];
@@ -23,6 +36,7 @@ Book.prototype.updateBook = function (index, value) {
 
 // Adds books to library
 bookForm.addEventListener('submit', (e) => {
+  formModal.classList.add('display-none');
   e.preventDefault();
   const book = new Book(title.value, author.value, pages.value, read.checked);
   myLibrary.push(book);

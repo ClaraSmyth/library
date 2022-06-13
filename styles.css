@@ -55,23 +55,35 @@ body {
                 FORM SECTION
 ####################################*/
 
-.form-section {
+.form-modal {
     position: fixed;
     width: 100vw;
     height: 100vh;
     background-color: hsla(0, 0%, 0%,40%);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    z-index: 1;
+}
+
+.form-modal.active {
+    display: flex;
 }
 
 .book-form {
+    position: relative;
     background-color: gray;
     display: flex;
     flex-direction: column;
     padding: 1rem;
     width: min-content;
+    z-index: 2;
+}
+
+.book-form-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
 }
 
 .book-form-fieldset {
