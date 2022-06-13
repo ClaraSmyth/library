@@ -36,7 +36,7 @@ Book.prototype.updateBook = function (index, value) {
 
 // Adds books to library
 bookForm.addEventListener('submit', (e) => {
-  formModal.classList.add('display-none');
+  formModal.classList.remove('active');
   e.preventDefault();
   const book = new Book(title.value, author.value, pages.value, read.checked);
   myLibrary.push(book);
