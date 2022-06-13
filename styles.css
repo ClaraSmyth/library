@@ -75,6 +75,23 @@ body {
     overflow: hidden;
 }
 
+.card-pages {
+    position: absolute;
+    padding: 5px;
+    bottom: 0;
+    left: 34px;
+    background-color: hsla(0, 0%, 100%, 50%);
+    border-radius: 0 10px 0 0;
+}
+
+.card-pages-svg {
+    position: absolute;
+    padding: 3px 3px 7px 7px; 
+    bottom: 0px;
+    left: -34px;
+    background-color: hsla(0, 0%, 100%, 50%);
+}
+
 .card-checkbox {
     display: none;
 }
@@ -82,9 +99,9 @@ body {
 .card-checkbox-label {
     position: absolute;
     padding: 5px;
-    bottom: 0;
+    top: 0;
     left: 0;
-    border-radius: 0 10px 0 0;
+    border-radius: 0 0 10px 0;
     background: hsla(0, 100%, 50%, 0.45);
     cursor: pointer;
 }

@@ -108,7 +108,12 @@ function createBookCard(book, index) {
   // Adds the pages to the div
   const cardPages = document.createElement('p');
   cardPages.classList.add('card-pages');
-  cardPages.innerText = book.pages + ' Pages';
+  cardPages.innerText = book.pages;
+  // Adds icon to the pages div
+  const cardPagesIcon = document.createElement('img');
+  cardPagesIcon.setAttribute('src', './icons/book-open-page-variant.svg');
+  cardPagesIcon.classList.add('card-pages-svg');
+  cardPages.append(cardPagesIcon);
   newCardDiv.append(cardPages);
 
   // Adds the read checkbox to the div
