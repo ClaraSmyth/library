@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,900;1,700&display=swap');
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    justify-content: center;
+    grid-auto-rows: max-content;
     font-size: 16px;
     font-family: 'Nunito Sans', sans-serif;
     background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
@@ -16,7 +16,9 @@ body {
 .header {
     display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
     padding: 1rem;
     background-color: hsla(0, 0%, 100%, 50%);
 }
@@ -54,25 +56,28 @@ body {
 ####################################*/
 
 .main {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+    grid-auto-rows: minmax(300px, auto);
     justify-content: center;
-    gap: 2rem;
+    justify-self: center;
+    gap: 1rem;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     padding: 2rem;
 }
 
 .card {
-    background-color: hsla(0, 0%, 100%, 50%);
     position: relative;
-    height: 250px;
-    width: 200px;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem 2.5rem;
     text-align: center;
-    display: grid;
     border-radius: 1rem;
     overflow: hidden;
+    overflow-wrap: anywhere;
+    background-color: hsla(0, 0%, 100%, 50%);
 }
 
 .card-pages {
@@ -184,7 +189,7 @@ body {
 ####################################*/
 
 .footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     background-color: hsla(0, 0%, 100%, 50%);
