@@ -1,17 +1,45 @@
-# Library
+<div  align=center>
+	<h1>Library App
+	<br>
+		<img src="https://img.shields.io/static/v1?label=&message=HTML&color=E34F26&style=for-the-badge&logo=HTML5&logoColor=white&logoWidth=&labelColor=&link=">
+		<img src="https://img.shields.io/static/v1?label=&message=CSS&color=1572B6&style=for-the-badge&logo=CSS3&logoColor=white&logoWidth=&labelColor=&link=">
+		<img src="https://img.shields.io/static/v1?label=&message=Javascript&color=F7DF1E&style=for-the-badge&logo=Javascript&logoColor=black&logoWidth=&labelColor=&link=">
+		<br>
+	</h1>
+	<h3><b><a href="https://clarasmyth.github.io/library/" target="_blank">View Live Demo</a></b></h3>
+</div>
 
-## Live Version - [Click here!](https://clarasmyth.github.io/library/)
+![Gif of Project](./readme-assets/gifOfPage.gif)
 
-![Image of webpage on desktop](./img/gifOfPage.gif)
+## Description
 
-Image on Desktop size screen
-![Image of webpage on desktop](./img/Desktop.png)
+This is a webpage created as part of [TheOdinProject](https://www.theodinproject.com) curriculum.
 
-Image on Mobile size screen
-![Image of webpage on desktop](./img/Mobile.png)
+To see the assignment details - [Click Here](https://www.theodinproject.com/lessons/node-path-javascript-library)
 
-This is another project created using JavaScript, HTML and CSS. It was created as part of [TheOdinProject](https://www.theodinproject.com/) curriculum.
+## Built Using
 
-## Lessons Learned
+-   HTML5 <img src="./readme-assets/html5.svg">
+-   CSS3 <img src="./readme-assets/css3.svg">
+-   JavaScript <img src="./readme-assets/javascript.svg">
 
-This project got me more familiar with using arrays and objects. I also learned about prototypal inheritance. 
+## Credits
+
+#### Icons
+
+-   [Simple Icons](https://simpleicons.org/)
+-   [Material Design Icons](https://materialdesignicons.com/)
+
+## Gallery
+
+#### Home Page
+
+![Image of Project](./readme-assets/Desktop.png)
+
+#### Tablet View
+
+![Image of Project](./readme-assets/Tablet.png)
+
+#### Mobile View
+
+![Image of Project](./readme-assets/Mobile.png)
