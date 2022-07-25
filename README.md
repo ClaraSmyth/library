@@ -13,7 +13,7 @@
 
 ## Description
 
-This is a webpage created as part of [TheOdinProject](https://www.theodinproject.com) curriculum.
+This is a book library app created as part of [TheOdinProject](https://www.theodinproject.com) curriculum.
 
 To see the assignment details - [Click Here](https://www.theodinproject.com/lessons/node-path-javascript-library)
 
